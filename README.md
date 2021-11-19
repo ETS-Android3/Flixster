@@ -2,10 +2,6 @@
 
 View a list of movies sourced from the The Movie Database API.
 
-Developed by: **Rohit Vishwanath Badugu**
-
-Time spent: **7** hours spent in total
-
 ## User Stories
 
 The following **required** functionality is completed:
