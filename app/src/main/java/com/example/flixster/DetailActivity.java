@@ -57,7 +57,7 @@ public class DetailActivity extends YouTubeBaseActivity {
                     if(results.length() == 0)
                         return;
                     String youtubeKey = results.getJSONObject(0).getString("key");
-                    initializeYoutube(youtubeKey);
+                    initializeYoutube(youtubeKey, movie.getRating());
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.e(TAG, "Error while fetching the youtube cues");
@@ -72,14 +72,20 @@ public class DetailActivity extends YouTubeBaseActivity {
         });
     }
 
-    private void initializeYoutube(String youtubeKey) {
+    private void initializeYoutube(String youtubeKey, Double rating) {
         youTubePlayerView.initialize(YOUTUBE_API_KEY,
                 new YouTubePlayer.OnInitializedListener() {
                     @Override
                     public void onInitializationSuccess(YouTubePlayer.Provider provider,
                                                         YouTubePlayer youTubePlayer, boolean b) {
-                        // do any work here to cue video, play video, etc.
-                        youTubePlayer.cueVideo(youtubeKey);
+                        // do any work here to cue video, play video, etc
+                        if(rating > 5.0){
+                            //Autoplay
+                            youTubePlayer.loadVideo(youtubeKey);
+                        }else{
+                            youTubePlayer.cueVideo(youtubeKey);
+                        }
+
                     }
 
                     @Override
