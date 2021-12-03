@@ -7,12 +7,16 @@ View a list of movies sourced from the The Movie Database API.
 The following **required** functionality is completed:
 
 * [X] User can view a list of movies (title, poster image, and overview) currently playing in theaters from the Movie Database API.
+* [X] Expose details of movie (ratings using RatingBar, popularity, and synopsis) in a separate activity.
+* [X] Allow video posts to be played in full-screen using the YouTubePlayerView
 
 The following *additional** features are implemented:
 
 * [X] Views should be responsive for both landscape/portrait mode.
 * [X] A nice default placeholder graphic for each image during loading.
 * [X] Improved the user interface through styling and coloring 
+* [X] Added a rounded corners for the images using the Glide transformations
+* [X] Trailers for popular movies are played automatically when the movie is selected
 
 ## Video Walkthrough
 
@@ -36,6 +40,7 @@ $ https://github.com/Rohit-Badugu/Flixster.git
 1. Async HTTP client ```https://github.com/codepath/android_guides/wiki/Using-CodePath-Async-Http-Client```
 2. Glide for loading images ```https://github.com/bumptech/glide```
 3. RecycleView ```https://developer.android.com/jetpack/androidx/releases/recyclerview```
+4. YoutubePlayerView ```https://guides.codepath.org/android/Streaming-Youtube-Videos-with-YouTubePlayerView```
 
 
 ## Android Version Targeting
